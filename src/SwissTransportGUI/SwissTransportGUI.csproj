@@ -31,9 +31,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Unbenannt-3.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +64,12 @@
     <Compile Include="StationsfahrplanControl.Designer.cs">
       <DependentUpon>StationsfahrplanControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="GoogleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GoogleControl.Designer.cs">
+      <DependentUpon>GoogleControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerbindungenControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +90,9 @@
     </Compile>
     <EmbeddedResource Include="StationsfahrplanControl.resx">
       <DependentUpon>StationsfahrplanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoogleControl.resx">
+      <DependentUpon>GoogleControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerbindungenControl.resx">
       <DependentUpon>VerbindungenControl.cs</DependentUpon>
@@ -102,6 +115,9 @@
       <Project>{d0262178-a48f-4de0-807b-e76b63e39421}</Project>
       <Name>SwissTransport</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Unbenannt-3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

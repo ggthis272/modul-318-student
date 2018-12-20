@@ -8,11 +8,13 @@ namespace SwissTransportGUI
     {
         private VerbindungenControl _VerbindungenControl = new VerbindungenControl();
         private StationsfahrplanControl _StationsfahrplanControl = new StationsfahrplanControl();
+        private GoogleControl _GoogleControl = new GoogleControl();
         public MainForm()
         {
             InitializeComponent();
             Controls.OfType<Panel>().First().Controls.Add(_VerbindungenControl);
         }
+
 
         private void VerbindungenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -26,6 +28,13 @@ namespace SwissTransportGUI
             Controls.OfType<Panel>().First().Controls.Clear();
             Controls.OfType<Panel>().First().Controls.Add(_StationsfahrplanControl);
             AcceptButton = _StationsfahrplanControl.AcceptButton;
+        }
+
+        private void googleMapsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controls.OfType<Panel>().First().Controls.Clear();
+            Controls.OfType<Panel>().First().Controls.Add(_GoogleControl);
+            AcceptButton = _GoogleControl.AcceptButton;
         }
     }
 }

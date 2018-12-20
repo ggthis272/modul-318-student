@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Mail;
+using System.Web;
 using System.Windows.Forms;
 
 namespace SwissTransportGUI
@@ -41,5 +43,51 @@ namespace SwissTransportGUI
         {
             _GUIFunctions.SwapConnectionPoints(cbVon, cbNach);
         }
+
+        private void Ebutton_Click(object sender, EventArgs e)
+        {
+            string allah = lvConnections.Items.ToString();
+            if (ETextbox.Text == "")
+                MessageBox.Show("Bitte geben Sie eine Email-Adresse ein!");
+            else
+            {
+                try
+                {
+                    MailMessage mail = new MailMessage();
+                    mail.From = new MailAddress("marco_rocchinotti@hotmail.com"); //Absender
+                    mail.To.Add(new MailAddress(Convert.ToString(this.ETextbox))); //Empfänger
+                    mail.Subject = "Fahrplan";
+                    mail.Body = "Die Liste - " + allah;
+                    mail.IsBodyHtml = true;
+                    SmtpClient SmtpServer = new SmtpClient();//SMTP Server
+                    SmtpServer.Host = "smtp.live.com";
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("marco_rocchinotti@hotmail.com", "Tsec1810");//Anmeldedaten für den SMTP Server
+                    SmtpServer.EnableSsl = true;
+                    SmtpServer.Send(mail);//Senden
+                    MessageBox.Show("Email versendet");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void lblVon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDatum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbVon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

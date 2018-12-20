@@ -25,5 +25,10 @@ namespace SwissTransportGUI
         {
             await _GUIFunctions.SearchStationsHelper(cbStation);
         }
+
+        private void cbStation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

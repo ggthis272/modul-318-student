@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwissTransportTest", "tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwissTransportGUI", "src\SwissTransportGUI\SwissTransportGUI.csproj", "{B9A3ED0F-2B4F-4B60-81C7-409C9D3BEA68}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup Wizard", "src\Setup Wizard\Setup Wizard.vdproj", "{257E2839-DBFB-4005-A02E-BE4DFB4E2DFB}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{64B4D04A-CAC5-4455-8F83-516DF49051FE}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SBB App Installer", "SBB App Installer\SBB App Installer.vdproj", "{BA9F492E-8974-4D9F-85D4-655ACD7F870E}"
 EndProject
 Global
@@ -33,10 +29,6 @@ Global
 		{B9A3ED0F-2B4F-4B60-81C7-409C9D3BEA68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9A3ED0F-2B4F-4B60-81C7-409C9D3BEA68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9A3ED0F-2B4F-4B60-81C7-409C9D3BEA68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{257E2839-DBFB-4005-A02E-BE4DFB4E2DFB}.Debug|Any CPU.ActiveCfg = Debug
-		{257E2839-DBFB-4005-A02E-BE4DFB4E2DFB}.Release|Any CPU.ActiveCfg = Release
-		{64B4D04A-CAC5-4455-8F83-516DF49051FE}.Debug|Any CPU.ActiveCfg = Debug
-		{64B4D04A-CAC5-4455-8F83-516DF49051FE}.Release|Any CPU.ActiveCfg = Release
 		{BA9F492E-8974-4D9F-85D4-655ACD7F870E}.Debug|Any CPU.ActiveCfg = Debug
 		{BA9F492E-8974-4D9F-85D4-655ACD7F870E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection

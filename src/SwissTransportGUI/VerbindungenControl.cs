@@ -46,6 +46,7 @@ namespace SwissTransportGUI
 
         private void Ebutton_Click(object sender, EventArgs e)
         {
+
             string allah = lvConnections.Items.ToString();
             if (ETextbox.Text == "")
                 MessageBox.Show("Bitte geben Sie eine Email-Adresse ein!");
